@@ -120,7 +120,6 @@
     overflow:hidden;
     padding:76px 0 0;
   }
-  :root[data-theme="dark"] header.hero, @media (prefers-color-scheme:dark){ header.hero{ color:var(--paper); } }
   header.hero .wrap{ max-width:1040px; position:relative; z-index:2; }
   .eyebrow{
     font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.16em;
@@ -266,6 +265,33 @@
   .lodge-card p{ margin:0; color:var(--stone); font-size:0.9rem; }
   @media (max-width:640px){ .lodging{ grid-template-columns:1fr; } }
 
+  /* ---------- IDEAS ---------- */
+  .idea-cards{ display:flex; flex-direction:column; gap:18px; }
+  .idea-card{
+    background:var(--paper-2); border:1px dashed var(--gorse); border-radius:6px;
+    padding:28px;
+  }
+  .idea-tag{
+    display:inline-block; font-family:var(--font-mono); font-size:0.7rem;
+    text-transform:uppercase; letter-spacing:0.09em; color:var(--paper);
+    background:var(--gorse); border-radius:100px; padding:3px 11px; margin-bottom:14px;
+  }
+  .idea-card h3{ font-family:var(--font-display); font-weight:400; font-size:1.3rem; margin:0 0 10px; }
+  .idea-card p{ margin:0 0 10px; color:var(--stone); font-size:0.95rem; max-width:68ch; }
+  .idea-card p:last-child{ margin-bottom:0; }
+  .kent-courses{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0;
+  }
+  .kent-course{
+    background:var(--paper); border:1px solid var(--rule); border-radius:5px; padding:16px;
+  }
+  .kent-course h4{ font-family:var(--font-display); font-weight:400; font-size:1.05rem; margin:0 0 8px; }
+  .kent-course p{ margin:0; color:var(--stone); font-size:0.86rem; }
+  .kent-course p.aside{
+    margin-top:8px; font-style:italic; color:var(--green-2); font-size:0.84rem;
+  }
+  @media (max-width:760px){ .kent-courses{ grid-template-columns:1fr; } }
+
   /* ---------- LOGISTICS / FOOTER ---------- */
   .logistics-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
   .logistics-grid dt{
@@ -290,6 +316,7 @@
       <a href="#itinerary">Itinerary</a>
       <a href="#courses">Courses</a>
       <a href="#lodging">Lodging</a>
+      <a href="#ideas">Ideas</a>
       <a href="#logistics">Logistics</a>
     </div>
     <div class="countdown-chip" id="countdownChip">calculating&hellip;</div>
@@ -446,6 +473,45 @@
         <h3>Logies Cottage</h3>
         <p>Rental cottage in St Andrews.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <div class="section-head reveal">
+      <p class="kicker">Nothing Booked — Just Ideas</p>
+      <h2>A couple of ideas on the table</h2>
+      <p class="section-note">No decisions need to be made on either of these yet — just floating them for the group to think about.</p>
+    </div>
+    <div class="idea-cards reveal">
+
+      <div class="idea-card">
+        <span class="idea-tag">Idea</span>
+        <h3>New York Layover</h3>
+        <p>The easiest way to get to the UK may be connecting through JFK. Depending on flight schedules, we could fly into New York a day early, play a round of golf, have a great dinner, and then catch our flight to Edinburgh the following day.</p>
+      </div>
+
+      <div class="idea-card">
+        <span class="idea-tag">Idea</span>
+        <h3>Kent Coast Extension</h3>
+        <p>Another option: extend the trip by a few days after Scotland and head south to England's Kent coast. Three legendary links, all on neighboring property, make for an easy add-on if there's interest.</p>
+        <div class="kent-courses">
+          <div class="kent-course">
+            <h4>Royal St George's</h4>
+            <p>One of England's most iconic links courses and a 15-time Open Championship host. Champions here include Darren Clarke (2011), Ben Curtis (2003), Greg Norman (1993), Sandy Lyle (1985), and Bobby Locke (1949). Consistently ranked among the best courses in the world.</p>
+          </div>
+          <div class="kent-course">
+            <h4>Prince's Golf Club</h4>
+            <p>Host of the 1932 Open Championship, won by Gene Sarazen, and recently transformed into one of England's premier modern links experiences.</p>
+            <p class="aside">Organizer's note: I'm playing here in September to do some reconnaissance 😁</p>
+          </div>
+          <div class="kent-course">
+            <h4>Royal Cinque Ports</h4>
+            <p>One of England's oldest and most revered links courses. Hosted The Open in 1909 (won by J.H. Taylor) and 1920 (won by George Duncan) — still one of the finest championship links in England.</p>
+          </div>
+        </div>
+        <p>Head back to London for another nice dinner before heading home.</p>
+      </div>
+
     </div>
   </section>
 
