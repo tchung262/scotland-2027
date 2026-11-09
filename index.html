@@ -291,6 +291,16 @@
     margin-top:8px; font-style:italic; color:var(--green-2); font-size:0.84rem;
   }
   @media (max-width:760px){ .kent-courses{ grid-template-columns:1fr; } }
+  .idea-tag.in{ background:var(--green-2); }
+  .roster{ margin:16px 0 4px; }
+  .roster .roster-label{
+    display:block; font-family:var(--font-mono); font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:0.09em; color:var(--stone); margin-bottom:8px;
+  }
+  .roster .who{
+    display:inline-block; background:var(--paper); border:1px solid var(--rule);
+    border-radius:100px; padding:4px 13px; font-size:0.86rem; margin:0 6px 6px 0;
+  }
 
   /* ---------- LOGISTICS / FOOTER ---------- */
   .logistics-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
@@ -480,7 +490,7 @@
     <div class="section-head reveal">
       <p class="kicker">Nothing Booked — Just Ideas</p>
       <h2>A couple of ideas on the table</h2>
-      <p class="section-note">No decisions need to be made on either of these yet — just floating them for the group to think about.</p>
+      <p class="section-note">The New York layover is just an idea. The London extension has four players in so far — nothing below is booked, and everyone else is welcome to join.</p>
     </div>
     <div class="idea-cards reveal">
 
@@ -491,9 +501,14 @@
       </div>
 
       <div class="idea-card">
-        <span class="idea-tag">Idea</span>
-        <h3>Kent Coast Extension</h3>
-        <p>Another option: extend the trip by a few days after Scotland and head south to England's Kent coast. Three legendary links, all on neighboring property, make for an easy add-on if there's interest.</p>
+        <span class="idea-tag in">Add-On &middot; 4 In</span>
+        <h3>London &amp; Kent Coast Extension</h3>
+        <p>Tony and Chris are extending the trip with a stretch in London after Scotland, playing nearby. Jason and Brian are in too. Dates and courses are still being worked out. Three legendary links on England's Kent coast, all on neighboring property, are the ones under consideration.</p>
+        <div class="roster">
+          <span class="roster-label">In so far</span>
+          <span class="who">Tony</span><span class="who">Chris</span><span class="who">Jason</span><span class="who">Brian</span>
+        </div>
+        <p>Want in? Let Tony know.</p>
         <div class="kent-courses">
           <div class="kent-course">
             <h4>Royal St George's</h4>
