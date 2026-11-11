@@ -301,6 +301,18 @@
     display:inline-block; background:var(--paper); border:1px solid var(--rule);
     border-radius:100px; padding:4px 13px; font-size:0.86rem; margin:0 6px 6px 0;
   }
+  .flights-scroll{ overflow-x:auto; border:1px solid var(--rule); border-radius:10px; background:var(--paper-2); }
+  table.flights{ width:100%; border-collapse:collapse; font-size:0.92rem; min-width:640px; }
+  table.flights th{
+    text-align:left; font-family:var(--font-mono); font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:0.09em; color:var(--stone); font-weight:600; padding:12px 14px; border-bottom:1px solid var(--rule);
+  }
+  table.flights td{ padding:11px 14px; border-top:1px solid var(--rule); vertical-align:top; }
+  table.flights tbody tr:first-child td{ border-top:none; }
+  table.flights td.who-cell{ font-family:var(--font-display); font-weight:600; white-space:nowrap; }
+  table.flights td.flt{ font-family:var(--font-mono); font-size:0.84rem; white-space:nowrap; }
+  table.flights .next-day{ display:block; color:var(--stone); font-size:0.8rem; }
+  .flights-note{ color:var(--stone); font-size:0.86rem; margin:12px 2px 0; }
 
   /* ---------- LOGISTICS / FOOTER ---------- */
   .logistics-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
@@ -327,6 +339,7 @@
       <a href="#courses">Courses</a>
       <a href="#lodging">Lodging</a>
       <a href="#ideas">Ideas</a>
+      <a href="#flights">Flights</a>
       <a href="#logistics">Logistics</a>
     </div>
     <div class="countdown-chip" id="countdownChip">calculating&hellip;</div>
@@ -528,6 +541,29 @@
       </div>
 
     </div>
+  </section>
+
+  <section id="flights">
+    <div class="section-head reveal">
+      <p class="kicker">Who&rsquo;s Landing When</p>
+      <h2>Flights</h2>
+      <p class="section-note">Everyone&rsquo;s flights in one place, so we can see who lands when. Send Tony your itinerary and it gets added here.</p>
+    </div>
+    <div class="flights-scroll reveal">
+      <table class="flights">
+        <thead>
+          <tr><th>Traveler</th><th>Date</th><th>Flight</th><th>Route</th><th>Departs</th><th>Arrives</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="who-cell">Tony</td><td>Sat 24 Apr</td><td class="flt">Delta DL 5500</td><td>RDU &rarr; JFK</td><td>4:35 PM</td><td>6:14 PM</td></tr>
+          <tr><td class="who-cell">Tony</td><td>Sat 24 Apr</td><td class="flt">Delta DL 208</td><td>JFK &rarr; EDI</td><td>10:35 PM</td><td>10:25 AM<span class="next-day">Sun 25 Apr</span></td></tr>
+          <tr><td class="who-cell">Tony</td><td>Sat 1 May</td><td class="flt">BA 1443</td><td>EDI &rarr; LHR T5</td><td>11:10 AM</td><td>12:45 PM</td></tr>
+          <tr><td class="who-cell">Tony</td><td>Thu 6 May</td><td class="flt">Delta DL 2</td><td>LHR &rarr; JFK</td><td>11:45 AM</td><td>2:55 PM</td></tr>
+          <tr><td class="who-cell">Tony</td><td>Thu 6 May</td><td class="flt">Delta DL 5150</td><td>JFK &rarr; RDU</td><td>5:00 PM</td><td>6:57 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="flights-note">All times are local to each airport.</p>
   </section>
 
   <section id="logistics">
