@@ -263,6 +263,10 @@
   }
   .lodge-card h3{ font-family:var(--font-display); font-size:1.4rem; margin:0 0 6px; font-weight:400; }
   .lodge-card p{ margin:0; color:var(--stone); font-size:0.9rem; }
+  .lodge-card .addr, .lodge-card .book{ display:block; font-size:0.9rem; margin-top:8px; }
+  .lodge-card a{ color:var(--green); text-decoration:underline; text-underline-offset:3px; }
+  .lodge-card .roster{ margin-top:16px; }
+  .lodge-card .roster .roster-label{ display:block; margin-bottom:8px; }
   @media (max-width:640px){ .lodging{ grid-template-columns:1fr; } }
 
   /* ---------- IDEAS ---------- */
@@ -496,11 +500,23 @@
         <span class="tag">4 Bedrooms</span>
         <h3>Braeside</h3>
         <p>Rental cottage in St Andrews.</p>
+        <span class="addr"><a href="https://www.google.com/maps/search/?api=1&amp;query=56.335330,-2.800870" target="_blank" rel="noopener">1 Largo Road, Scotland, GB, KY16 8RL</a></span>
+        <span class="book"><a href="https://book.shortstaystandrews.co.uk/rentals/house-st-andrews-braeside-452464.html" target="_blank" rel="noopener">View booking page &rarr;</a></span>
+        <div class="roster">
+          <span class="roster-label">Staying here</span>
+          <span class="who">Tony</span><span class="who">Steve</span><span class="who">Brian</span><span class="who">Scott</span>
+        </div>
       </div>
       <div class="lodge-card">
         <span class="tag">4 Bedrooms</span>
         <h3>Logies Cottage</h3>
         <p>Rental cottage in St Andrews.</p>
+        <span class="addr"><a href="https://www.google.com/maps/search/?api=1&amp;query=56.339780,-2.796205" target="_blank" rel="noopener">Logies Lane, Scotland, GB, KY16</a></span>
+        <span class="book"><a href="https://book.shortstaystandrews.co.uk/rentals/house-st-andrews-logies-cottage-510597.html" target="_blank" rel="noopener">View booking page &rarr;</a></span>
+        <div class="roster">
+          <span class="roster-label">Staying here</span>
+          <span class="who">Chris</span><span class="who">Jason</span><span class="who">Som</span><span class="who">Nick</span>
+        </div>
       </div>
     </div>
   </section>
