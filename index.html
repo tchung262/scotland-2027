@@ -310,6 +310,15 @@
   table.flights td{ padding:11px 14px; border-top:1px solid var(--rule); vertical-align:top; }
   table.flights tbody tr:first-child td{ border-top:none; }
   table.flights td.who-cell{ font-family:var(--font-display); font-weight:600; white-space:nowrap; }
+  table.flights tr.person-row th{
+    background:var(--paper-3); color:var(--ink); font-family:var(--font-display); font-size:1rem;
+    letter-spacing:0; text-transform:none; font-weight:600; padding:10px 14px;
+    border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  }
+  table.flights tbody:first-of-type tr.person-row th{ border-top:none; }
+  table.flights td.pending{ color:var(--stone); font-style:italic; }
+  .flights-sub{ font-family:var(--font-mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--stone); font-weight:600; margin:28px 2px 10px; }
+  table.flights.summary{ min-width:480px; }
   table.flights td.flt{ font-family:var(--font-mono); font-size:0.84rem; white-space:nowrap; }
   table.flights .next-day{ display:block; color:var(--stone); font-size:0.8rem; }
   .flights-note{ color:var(--stone); font-size:0.86rem; margin:12px 2px 0; }
@@ -546,17 +555,38 @@
       <h2>Flights</h2>
       <p class="section-note">Everyone&rsquo;s flights in one place, so we can see who lands when. Send Tony your itinerary and it gets added here.</p>
     </div>
+    <p class="flights-sub" style="margin-top:0">Edinburgh arrivals and departures</p>
+    <div class="flights-scroll reveal">
+      <table class="flights summary">
+        <thead>
+          <tr><th>Traveler</th><th>Lands in Edinburgh</th><th>Leaves Edinburgh</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="who-cell">Tony</td><td>Sun 25 Apr, 10:25 AM</td><td>Sat 1 May, 11:10 AM</td></tr>
+          <tr><td class="who-cell">Brian</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Chris</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Jason</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Nick</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Scott</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Som</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+          <tr><td class="who-cell">Steve</td><td class="pending" colspan="2">Awaiting itinerary</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="flights-sub">Full itineraries</p>
     <div class="flights-scroll reveal">
       <table class="flights">
         <thead>
-          <tr><th>Traveler</th><th>Date</th><th>Flight</th><th>Route</th><th>Departs</th><th>Arrives</th></tr>
+          <tr><th>Date</th><th>Flight</th><th>Route</th><th>Departs</th><th>Arrives</th></tr>
         </thead>
         <tbody>
-          <tr><td class="who-cell">Tony</td><td>Sat 24 Apr</td><td class="flt">Delta DL 5500</td><td>RDU &rarr; JFK</td><td>4:35 PM</td><td>6:14 PM</td></tr>
-          <tr><td class="who-cell">Tony</td><td>Sat 24 Apr</td><td class="flt">Delta DL 208</td><td>JFK &rarr; EDI</td><td>10:35 PM</td><td>10:25 AM<span class="next-day">Sun 25 Apr</span></td></tr>
-          <tr><td class="who-cell">Tony</td><td>Sat 1 May</td><td class="flt">BA 1443</td><td>EDI &rarr; LHR T5</td><td>11:10 AM</td><td>12:45 PM</td></tr>
-          <tr><td class="who-cell">Tony</td><td>Thu 6 May</td><td class="flt">Delta DL 2</td><td>LHR &rarr; JFK</td><td>11:45 AM</td><td>2:55 PM</td></tr>
-          <tr><td class="who-cell">Tony</td><td>Thu 6 May</td><td class="flt">Delta DL 5150</td><td>JFK &rarr; RDU</td><td>5:00 PM</td><td>6:57 PM</td></tr>
+          <tr class="person-row"><th colspan="5">Tony</th></tr>
+          <tr><td>Sat 24 Apr</td><td class="flt">Delta DL 5500</td><td>RDU &rarr; JFK</td><td>4:35 PM</td><td>6:14 PM</td></tr>
+          <tr><td>Sat 24 Apr</td><td class="flt">Delta DL 208</td><td>JFK &rarr; EDI</td><td>10:35 PM</td><td>10:25 AM<span class="next-day">Sun 25 Apr</span></td></tr>
+          <tr><td>Sat 1 May</td><td class="flt">BA 1443</td><td>EDI &rarr; LHR T5</td><td>11:10 AM</td><td>12:45 PM</td></tr>
+          <tr><td>Thu 6 May</td><td class="flt">Delta DL 2</td><td>LHR &rarr; JFK</td><td>11:45 AM</td><td>2:55 PM</td></tr>
+          <tr><td>Thu 6 May</td><td class="flt">Delta DL 5150</td><td>JFK &rarr; RDU</td><td>5:00 PM</td><td>6:57 PM</td></tr>
         </tbody>
       </table>
     </div>
