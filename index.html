@@ -294,6 +294,11 @@
   .kent-course p.aside{
     margin-top:8px; font-style:italic; color:var(--green-2); font-size:0.84rem;
   }
+  .kent-course .when{ font-family:var(--font-mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--green); font-weight:600; margin:0 0 8px; }
+  .teesheet{ margin:12px 0 0; padding:10px 0 0; border-top:1px solid var(--rule); font-size:0.86rem; }
+  .teesheet .tee{ display:flex; gap:10px; margin:0 0 4px; color:var(--ink); }
+  .teesheet .tee .t{ font-family:var(--font-mono); font-size:0.8rem; min-width:5.2em; color:var(--stone); }
+  .teesheet .pending-note{ margin:6px 0 0; font-size:0.78rem; color:var(--stone); font-style:italic; }
   @media (max-width:760px){ .kent-courses{ grid-template-columns:1fr; } }
   .idea-tag.in{ background:var(--green-2); }
   .roster{ margin:16px 0 4px; }
@@ -533,21 +538,37 @@
           <span class="roster-label">Confirmed</span>
           <span class="who">Tony</span><span class="who">Chris</span><span class="who">Jason</span><span class="who">Brian</span><span class="who">Steve</span><span class="who">Nick</span>
         </div>
-        <p>Want in? Let Tony know.</p>
+        <p>We stay at The Lodge at Prince's from Saturday 1 May through Tuesday 4 May. Want in? Let Tony know.</p>
         <div class="kent-courses">
           <div class="kent-course">
-            <h4>Royal St George's</h4>
-            <p>One of England's most iconic links courses and a 15-time Open Championship host. Champions here include Collin Morikawa (2021), Darren Clarke (2011), Ben Curtis (2003), Greg Norman (1993), Sandy Lyle (1985), and Bobby Locke (1949). Consistently ranked among the best courses in the world.</p>
-            <p class="aside">Organizer's note: I've played here and highly recommend it.</p>
-          </div>
-          <div class="kent-course">
+            <p class="when">Sun 2 May</p>
             <h4>Prince's Golf Club</h4>
             <p>Host of the 1932 Open Championship, won by Gene Sarazen, and recently transformed into one of England's premier modern links experiences.</p>
             <p class="aside">Organizer's note: I've played here and highly recommend it.</p>
+            <div class="teesheet">
+            <div class="tee"><span class="t">11:50 AM</span><span>Tony, Brian, Nick</span></div>
+            <div class="tee"><span class="t">12:00 PM</span><span>Steve, Jason, Chris</span></div>
+            <p class="pending-note">Tee times pending confirmation from the club.</p>
+            </div>
           </div>
           <div class="kent-course">
+            <p class="when">Mon 3 May</p>
             <h4>Royal Cinque Ports</h4>
             <p>One of England's oldest and most revered links courses. Hosted The Open in 1909 (won by J.H. Taylor) and 1920 (won by George Duncan) — still one of the finest championship links in England.</p>
+            <div class="teesheet">
+            <div class="tee"><span class="t">10:30 AM</span><span>Tony, Brian, Jason</span></div>
+            <div class="tee"><span class="t">10:40 AM</span><span>Steve, Chris, Nick</span></div>
+            </div>
+          </div>
+          <div class="kent-course">
+            <p class="when">Tue 4 May</p>
+            <h4>Royal St George's</h4>
+            <p>One of England's most iconic links courses and a 15-time Open Championship host. Champions here include Collin Morikawa (2021), Darren Clarke (2011), Ben Curtis (2003), Greg Norman (1993), Sandy Lyle (1985), and Bobby Locke (1949). Consistently ranked among the best courses in the world.</p>
+            <p class="aside">Organizer's note: I've played here and highly recommend it.</p>
+            <div class="teesheet">
+            <div class="tee"><span class="t">9:00 AM</span><span>Tony, Brian, Chris</span></div>
+            <div class="tee"><span class="t">9:10 AM</span><span>Steve, Jason, Nick</span></div>
+            </div>
           </div>
         </div>
         <p>Head back to London for another nice dinner before heading home.</p>
